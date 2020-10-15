@@ -191,18 +191,18 @@ int main() {//introduction
 	std::cout << "You will be playing against AI\n";
 	char choice;
 	do {
-		std::cout << "\n\nYour current balance is $ " << amount << "\n";
+		std::cout << " Your current balance is $ " << amount << "\n";
 		houseamount = amount;
 		// Get player's betting amount
 		do
 		{
-			std::cout << ", enter money to bet : $";
+			std::cout << " Enter money to bet : $";
 			std::cin >> bettingAmount;
 			if (bettingAmount > amount) {
 				std::cout << "Your betting amount is more than your current balance\n"
-					<< "\nRe-enter data\n ";
+					<< " Re-enter amount\n ";
 			}
-		} while (bettingAmount > amount);
+		} while (bettingAmount > amount && bettingAmount >= 10);
 		//player's first card
 		std::cout << "This is your first card\n";
 		std::cin.get();
