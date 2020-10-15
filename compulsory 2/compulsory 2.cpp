@@ -202,7 +202,11 @@ int main() {//introduction
 				std::cout << "Your betting amount is more than your current balance\n"
 					<< " Re-enter amount\n ";
 			}
-		} while (bettingAmount > amount && bettingAmount >= 10);
+			else if (bettingAmount < 10) {
+				std::cout << "Bet more\n"
+					<< " Re-enter amount\n ";
+			}
+		} while (bettingAmount > amount || bettingAmount <= 10);
 		//player's first card
 		std::cout << "This is your first card\n";
 		std::cin.get();
